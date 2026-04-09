@@ -1,0 +1,30 @@
+﻿Name: SOAEB
+College: Phonics Group of Institutions, Roorkee
+Email: soaebhasan04@gmail.com
+
+
+Problem Statement:
+Brain Tumor - Classification
+glioma_tumor, meningioma_tumor, pituitary_tumor, no_tumor.
+
+
+Approach:
+- Custom CNN with 3 Conv blocks
+- Data Augmentation (flip, rotation)
+- Class weighting for imbalance
+- BatchNorm + Dropout for regularization
+
+
+Results:
+- Validation Accuracy: 79.9%
+- F1 Score: 0.79
+- Best performing class: pituitary_tumor (F1: 0.92)
+- Weakest class: meningioma_tumor (F1: 0.68)
+
+
+Model Architecture:
+- 3 Conv2D layers (32, 64, 128 filters)
+- MaxPooling after each block
+- Dropout (0.25, 0.25, 0.4, 0.5)
+- BatchNormalization
+- Final FC layer: 256 → 4 classes
